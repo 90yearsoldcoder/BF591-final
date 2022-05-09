@@ -34,9 +34,10 @@ draw_table_Summary<-function(metadata){
 }
 
 
-#this funtion is used to sort the metadata table, sorted by sort_item
-draw_table_metadata<-function(metadata, sort_item){
-  data<-metadata %>% select(
+#this funtion is used to sort the metadata table
+draw_table_metadata<-function(metadata){
+  #print(metadata)
+  data<-metadata %>% dplyr::select(
     Run,
     age_of_death,
     Diagnosis,
